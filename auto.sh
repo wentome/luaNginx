@@ -6,7 +6,7 @@ NGX_DEVEL_KIT=$DIR/ngx_devel_kit
 LUA_NGINX_MODULE=$DIR/lua-nginx-module-0.10.15
 LUA_RESTY_CORE=$DIR/lua-resty-core-0.1.17
 LUA_RESTY_LRUCACHE=$DIR/lua-resty-lrucache
-
+ECHO_NGINX_MODULE=$DIR/echo-nginx-module-0.62rc1
 rm -rf $TARGET
 mkdir $TARGET
 
@@ -21,7 +21,8 @@ export LUAJIT_INC=$TARGET/include/luajit-2.1
 ./configure --prefix=$TARGET \
          --with-ld-opt="-Wl,-rpath,$TARGET/lib" \
 	 --add-module=$NGX_DEVEL_KIT \
-         --add-module=$LUA_NGINX_MODULE
+         --add-module=$LUA_NGINX_MODULE\
+	 --add-module=$ECHO_NGINX_MODULE
 
 make && make install
 
