@@ -1,8 +1,9 @@
 # luaNginx
 ## Build nginx with  lua support
 
-https://github.com/openresty/lua-nginx-module/#nginx-api-for-lua
 
+https://github.com/openresty/lua-nginx-module/#nginx-api-for-lua
+modify auto.sh and run
 ```
 DIR=`pwd`
 TARGET=/root/nginx
@@ -13,7 +14,6 @@ LUA_NGINX_MODULE=$DIR/lua-nginx-module-0.10.15
 LUA_RESTY_CORE=$DIR/lua-resty-core-0.1.17
 LUA_RESTY_LRUCACHE=$DIR/lua-resty-lrucache 
 ```
-
 
 ## add nginx.conf
 ```
