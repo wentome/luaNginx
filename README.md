@@ -2,7 +2,8 @@
 ## Build nginx with  lua support
 
 
-https://github.com/openresty/lua-nginx-module/#nginx-api-for-lua
+https://github.com/openresty/lua-nginx-module/#nginx-api-for-lua  
+
 modify auto.sh and run
 ```
 DIR=`pwd`
