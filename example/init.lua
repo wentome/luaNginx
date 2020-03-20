@@ -1,0 +1,1 @@
+masterPid = ngx.worker.pid()

@@ -8,7 +8,7 @@ LUA_RESTY_CORE=$DIR/lua-resty-core-0.1.17
 LUA_RESTY_LRUCACHE=$DIR/lua-resty-lrucache
 ECHO_NGINX_MODULE=$DIR/echo-nginx-module-0.62rc1
 rm -rf $TARGET
-mkdir $TARGET
+mkdir -p $TARGET
 
 cd $LUAJIT
 make &&  make install PREFIX=$TARGET
@@ -32,6 +32,7 @@ cd $LUA_RESTY_LRUCACHE
 make install PREFIX=$TARGET
 
 rm -rf $TARGET/include
+rm -rf $TARGET/bin
 
 mkdir $TARGET/conf/conf.d
 cp $DIR/example $TARGET -rf
